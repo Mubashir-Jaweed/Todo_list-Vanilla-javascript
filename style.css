@@ -56,6 +56,7 @@ form button:hover{
     justify-content: center;
     align-items: center;
 }
+
 .todo-list{
     min-width: 30%;
     list-style: none;
@@ -69,6 +70,7 @@ form button:hover{
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
+    
 }
 
 .todo li{
@@ -139,6 +141,14 @@ select{
     cursor: pointer;
     border-radius: 50px;
     padding: 1rem;
+    font-weight: 700;
+    font-size: 18px;
+}
+select::selection{
+    width: 7rem;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 0.5rem;
 }
 .select:after{
     content:'\25BC' ;
@@ -149,18 +159,22 @@ select{
     padding: 1rem;
     pointer-events: none;
     transition: all 0.3s ease;
-    animation: animate 1s alternate-reverse;
-}
+    animation: updown 2s ease infinite;}
 
-@keyframes animate {
-    10%{
-        transform: translateY(1rem);
-    }
-    50%{
-        transform: translateY(2rem);
-    }
-    100%{
-        transform: translateY(0.5rem);
-    }
-    
-}
+    @keyframes updown {
+        0% {
+          transform: translateY(-20%);
+        }
+        30% {
+          transform: translateY(5%);
+        }
+        50% {
+          transform: translateY(20%);
+        }
+        70% {
+          transform: translateY(30%);
+        }
+        100% {
+          transform: translateY(-20%);
+        }
+      }

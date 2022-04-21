@@ -4,7 +4,8 @@ const todoButton = document.querySelector('.todo-button')
 const todoList = document.querySelector('.todo-list')
 
 //Event Listener
-todoButton.addEventListener('click', addTodo)
+
+// todoButton.addEventListener('click', addTodo)
 todoList.addEventListener('click',deleteCheck)
 
 //Functions
@@ -56,3 +57,6 @@ function deleteCheck(e){
         todo.classList.toggle('completed')
     }
 }
+
+
+
